@@ -1,0 +1,168 @@
+@import "~antd/dist/antd.css";
+
+.App {
+  text-align: center;
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+  .contacts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .card {
+    margin: 10px;
+    .ant-card{
+      width:300px
+    }
+    .ant-card-head-title {
+      font-size: 22px;
+    }
+  }
+  .ant-layout {
+    .sidebar {
+      background: #001529;
+      .ant-menu {
+        .ant-menu-item-selected {
+          background: #5ed8bf;
+        }
+        .ant-menu-item {
+          span,
+          a {
+            color: #001529;
+          }
+        }
+        .ant-menu-item :hover {
+          span,
+          a {
+            color: #fff;
+          }
+        }
+      }
+      .ant-menu-dark {
+        .anticon {
+          color: #fff;
+        }
+        .ant-menu-item-selected {
+          a {
+            color: black;
+          }
+          a:hover {
+            color: black;
+          }
+        }
+      }
+      .logo {
+        height: 100px;
+      }
+      .ant-layout-sider-collapsed{
+        .logo {
+          height: 50px;
+        }
+      }
+      
+  
+    }
+    .ant-layout-header {
+      background: #5ed8bf;
+    }
+    .ant-layout-content {
+      background: #fff;
+      .ant-col {
+        font-size: 18px;
+        span {
+          margin-right: 10px;
+        }
+      }
+      .ant-card {
+        margin: 10px;
+      }
+      .ant-form{
+        margin-top: 50px;
+      }
+    }
+  }
+  .active {
+    opacity: 1;
+  }
+  
+  .ant-btn-dashed {
+    background-color: #001529;
+    color: #001529;
+    border-color: #001529;
+    transition: 0.6s;
+  }
+
+  .ant-btn-dashed:hover {
+    background-color: #fff;
+    color: #fff;
+    border-color: #fff;
+  }
+  .ant-btn-primary {
+    background-color: #001529;
+    color: #fff;
+    border-color: #001529;
+  }
+  .ant-btn-primary:hover {
+    background-color: #001529;
+  }
+  .ant-spin{
+    margin-top: 100px;
+    .ant-spin-dot-item {
+      background-color: #001529;
+    }
+  }
+  .ant-input-search-enter-button {
+    input:hover,
+    input:focus {
+      border-color: #001529;
+      outline: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:600px){
+  .App{
+    form{
+      margin: 20px;
+    }
+    .card{
+      max-width: 220px;
+      .ant-card{
+        width: 200px;
+        white-space: pre-wrap;
+        .ant-card-meta-title{
+          white-space: pre-wrap;
+        }
+      }
+    }
+  }
+}
