@@ -21,7 +21,7 @@ const Auth = ({ items, history }) => {
   const onFinish = values => {
      
     if (items) {
-      items.map(item => {
+      items.forEach(item => {
         if (values.username === item.username) {
           localStorage.setItem("auth", JSON.stringify(values));
           history.push("/");
