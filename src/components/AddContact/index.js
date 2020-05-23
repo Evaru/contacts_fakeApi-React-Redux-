@@ -31,7 +31,7 @@ class AddContact extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setState({
       ...this.state,
       name: "",
@@ -71,7 +71,7 @@ class AddContact extends React.Component {
     };
 
     add(data);
-    this.componentWillMount();
+    this.componentDidMount();
   }
 
   onFinishFailed(errorInfo) {
