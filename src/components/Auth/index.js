@@ -17,22 +17,19 @@ const tailLayout = {
 };
 
 const Auth = ({ items, history }) => {
-  const onFinishFailed = errorInfo => {
-    console.log("Failed:", errorInfo);
-  };
 
   const onFinish = values => {
      
     if (items) {
       items.map(item => {
-        if (values.username == item.username) {
+        if (values.username === item.username) {
           localStorage.setItem("auth", JSON.stringify(values));
           history.push("/");
         }
       });
       let auth = JSON.parse(localStorage.getItem("auth"));
       if(!auth ){
-        message.error(values.username+' - no such user') 
+        message.error(`${values.username} - no such user`) 
       }
       
     }

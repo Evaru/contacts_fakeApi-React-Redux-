@@ -30,9 +30,9 @@ class ContactsList extends React.Component {
     const { fetchRemoveItem, loading } = this.props;
     const { search } = this.state;
     let filterItems =
-      items != null
+      items !== null
         ? items.filter(item => {
-            return item.name.toLowerCase().indexOf(search.toLowerCase()) != -1;
+            return item.name.toLowerCase().includes(search.toLowerCase());
           })
         : null;
 
@@ -48,7 +48,7 @@ class ContactsList extends React.Component {
           />
 
           <div className="contacts">
-            {filterItems && filterItems != null && loading != true ? (
+            {filterItems && filterItems !== null && loading !== true ? (
               filterItems.map(item => {
                 return (
                   <ContactsListComponent

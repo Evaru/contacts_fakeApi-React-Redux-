@@ -7,7 +7,7 @@ const ContactsListComponent = ({ item, onRemove }) => {
 
   return (
     <div >
-      {item && item != "None" ? (
+      {item && item !== "None" ? (
         <ContactItem key={item.id} {...item} onRemove={onRemove} />
       ) : (
         <Spin size="large" style={{ marginTop: "100px" }} />

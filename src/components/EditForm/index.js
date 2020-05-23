@@ -33,12 +33,13 @@ class EditForm extends React.Component {
   }
 
   componentDidMount() {
+   
     const item =
-      this.props.items != "None" && this.props.items != null
-        ? this.props.items.filter(item => item.id == this.props.id)[0]
+      this.props.items !== "None" && this.props.items !== null
+        ? this.props.items.filter(item => item.id === Number(this.props.id))[0]
         : null;
 
-    if (item && item != null) {
+    if (item && item !== null) {
       this.setState({
         ...this.state,
         id: item.id,

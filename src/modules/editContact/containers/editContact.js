@@ -20,7 +20,7 @@ class editContact extends React.Component {
 
   render() {
     const { items, loading, disabled, match, fetchUpdateItem } = this.props;
-    return !items && loading != false ? (
+    return !items && loading !== false ? (
       <Spin size="large" />
     ) : (
       <EditForm
