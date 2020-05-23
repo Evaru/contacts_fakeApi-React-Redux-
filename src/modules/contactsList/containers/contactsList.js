@@ -29,7 +29,6 @@ class ContactsList extends React.Component {
     const { items } = this.props;
     const { fetchRemoveItem, loading } = this.props;
     const { search } = this.state;
-    this.state.items = items;
     let filterItems =
       items != null
         ? items.filter(item => {
