@@ -12,7 +12,7 @@ class authModule extends React.Component {
         };
     }
 
-    componentWillMount(){
+    componentDidMount(){
         const { fetchUsers } = this.props
         fetchUsers()
       
