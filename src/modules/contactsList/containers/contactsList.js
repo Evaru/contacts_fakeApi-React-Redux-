@@ -1,7 +1,7 @@
 import React from "react";
 import { ContactsListComponent } from "../../../components";
 import { connect } from "react-redux";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import ContactsListActions from "../../../actions";
 import { Input, Spin, Row } from "antd";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { EditForm } from "../../../components";
 import { connect } from "react-redux";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import ContactsListActions from "../../../actions";
 import { Spin } from "antd";
 
