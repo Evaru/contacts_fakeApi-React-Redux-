@@ -1,4 +1,4 @@
 
-import contactsList from './containers/contactsList';
+import contactsList from './containers/contactsList'
 
-export default contactsList;
+export default contactsList

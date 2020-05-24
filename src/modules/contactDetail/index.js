@@ -1,3 +1,3 @@
-import detailContact from './containers/detail';
+import detailContact from './containers/detail'
 
-export default detailContact;
+export default detailContact

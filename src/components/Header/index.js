@@ -1,21 +1,20 @@
-import React from "react";
-import "antd/dist/antd.css";
-import { withRouter } from "react-router-dom";
-import { Layout } from "antd";
-import { LoginOutlined, PlusCircleOutlined } from "@ant-design/icons";
-import { Row, Col, Tooltip, Button } from "antd";
+import React from 'react'
+import 'antd/dist/antd.css'
+import { withRouter } from 'react-router-dom'
+import { Layout, Row, Col, Tooltip, Button } from 'antd'
+import { LoginOutlined, PlusCircleOutlined } from '@ant-design/icons'
 
-const { Header } = Layout;
+const { Header } = Layout
 
 const HeaderElem = props => {
-  const logout = function(e) {
-    localStorage.clear();
-    props.history.push("/login");
-  };
-  const add = function(e) {
-    props.history.push("/add");
-  };
-  const auth = JSON.parse(localStorage.getItem("auth"));
+  const logout = function (e) {
+    localStorage.clear()
+    props.history.push('/login')
+  }
+  const add = function (e) {
+    props.history.push('/add')
+  }
+  const auth = JSON.parse(localStorage.getItem('auth'))
   return (
     <Header className="site-layout-background " style={{ padding: 0 }}>
       <Row className="app__header">
@@ -47,6 +46,6 @@ const HeaderElem = props => {
         </Col>
       </Row>
     </Header>
-  );
-};
-export default withRouter(HeaderElem);
+  )
+}
+export default withRouter(HeaderElem)

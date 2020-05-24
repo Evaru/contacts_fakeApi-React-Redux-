@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, Input, Button } from "antd";
+import React from 'react'
+import { Form, Input, Button } from 'antd'
 
 const layout = {
   labelCol: {
@@ -8,51 +8,52 @@ const layout = {
   wrapperCol: {
     span: 6
   }
-};
+}
 const tailLayout = {
   wrapperCol: {
     offset: 6,
     span: 12
   }
-};
+}
 
 class AddContact extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      name: "",
-      username: "",
-      phone: "",
-      email: "",
-      company: "",
-      city: "",
-      street: "",
-      suite: ""
-    };
+      name: '',
+      username: '',
+      phone: '',
+      email: '',
+      company: '',
+      city: '',
+      street: '',
+      suite: ''
+    }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({
       ...this.state,
-      name: "",
-      username: "",
-      phone: "",
-      email: "",
-      company: "",
-      city: "",
-      street: "",
-      suite: ""
-    });
-  }
-  onChange(e) {
-    const { name, value } = e.target;
-    let newState = this.state;
-    newState[name] = value;
-    this.setState(newState);
+      name: '',
+      username: '',
+      phone: '',
+      email: '',
+      company: '',
+      city: '',
+      street: '',
+      suite: ''
+    })
   }
 
-  save() {
-    const { add } = this.props;
+  onChange (e) {
+    const { name, value } = e.target
+    const newState = this.state
+    newState[name] = value
+    this.setState(newState)
+  }
+
+  save () {
+    const { add } = this.props
     const data = {
       ...this.data,
       id: this.state.id,
@@ -68,17 +69,17 @@ class AddContact extends React.Component {
       company: {
         name: this.state.company
       }
-    };
+    }
 
-    add(data);
-    this.componentDidMount();
+    add(data)
+    this.componentDidMount()
   }
 
-  onFinishFailed(errorInfo) {
-    console.log("Failed:", errorInfo);
+  onFinishFailed (errorInfo) {
+    console.log('Failed:', errorInfo)
   }
 
-  render() {
+  render () {
     const {
       name,
       username,
@@ -88,8 +89,8 @@ class AddContact extends React.Component {
       city,
       street,
       suite
-    } = this.state;
-    
+    } = this.state
+
     return (
       <div>
         <Form
@@ -201,8 +202,8 @@ class AddContact extends React.Component {
           </Form.Item>
         </Form>
       </div>
-    );
+    )
   }
 }
 
-export default AddContact;
+export default AddContact

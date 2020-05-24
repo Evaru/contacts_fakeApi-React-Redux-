@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, Input, Button, message } from "antd";
+import React from 'react'
+import { Form, Input, Button, message } from 'antd'
 
 const layout = {
   labelCol: {
@@ -8,33 +8,29 @@ const layout = {
   wrapperCol: {
     span: 8
   }
-};
+}
 const tailLayout = {
   wrapperCol: {
     offset: 8,
     span: 8
   }
-};
+}
 
 const Auth = ({ items, history }) => {
-
   const onFinish = values => {
-     
     if (items) {
       items.forEach(item => {
         if (values.username === item.username) {
-          localStorage.setItem("auth", JSON.stringify(values));
-          history.push("/");
+          localStorage.setItem('auth', JSON.stringify(values))
+          history.push('/')
         }
-      });
-      let auth = JSON.parse(localStorage.getItem("auth"));
-      if(!auth ){
-        message.error(`${values.username} - no such user`) 
+      })
+      const auth = JSON.parse(localStorage.getItem('auth'))
+      if (!auth) {
+        message.error(`${values.username} - no such user`)
       }
-      
     }
-    
-  };
+  }
 
   return (
     <Form
@@ -45,7 +41,7 @@ const Auth = ({ items, history }) => {
       }}
       onFinish={onFinish}
       // onFinishFailed={onFinishFailed}
-      style={{ margin: "50px" }}
+      style={{ margin: '50px' }}
     >
       <Form.Item
         label="Username"
@@ -53,7 +49,7 @@ const Auth = ({ items, history }) => {
         rules={[
           {
             required: true,
-            message: "Please input your username!"
+            message: 'Please input your username!'
           }
         ]}
       >
@@ -66,7 +62,7 @@ const Auth = ({ items, history }) => {
         rules={[
           {
             required: true,
-            message: "Please input your password!"
+            message: 'Please input your password!'
           }
         ]}
       >
@@ -78,7 +74,7 @@ const Auth = ({ items, history }) => {
         </Button>
       </Form.Item>
     </Form>
-  );
-};
+  )
+}
 
-export default Auth;
+export default Auth

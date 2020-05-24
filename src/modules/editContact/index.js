@@ -1,4 +1,4 @@
 
-import editContact from './containers/editContact';
+import editContact from './containers/editContact'
 
-export default editContact;
+export default editContact

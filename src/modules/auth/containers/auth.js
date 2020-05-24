@@ -1,34 +1,33 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { Authorization } from '../../../components';
-import ContactsListActions from '../../../actions';
+import React from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import { Authorization } from '../../../components'
+import ContactsListActions from '../../../actions'
 
 class authModule extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-          auth: false
-        };
+  constructor (props) {
+    super(props)
+    this.state = {
+      auth: false
     }
+  }
 
-    componentDidMount(){
-        const { fetchUsers } = this.props
-        fetchUsers()
-      
-    }
+  componentDidMount () {
+    const { fetchUsers } = this.props
+    fetchUsers()
+  }
 
-    render(){
-        const { items, history } = this.props
-        return(
-            <div>
-                <Authorization items={items} history={history}/>
-            </div>
-        )
-    }
+  render () {
+    const { items, history } = this.props
+    return (
+      <div>
+        <Authorization items={items} history={history}/>
+      </div>
+    )
+  }
 }
 
-export default withRouter( connect(
-    ({contacts})=>contacts,
-    ContactsListActions
- )(authModule))
+export default withRouter(connect(
+  ({ contacts }) => contacts,
+  ContactsListActions
+)(authModule))

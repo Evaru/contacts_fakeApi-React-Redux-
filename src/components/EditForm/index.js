@@ -1,6 +1,6 @@
-import React from "react";
-import { Redirect } from "react-router-dom";
-import { Form, Input, Button } from "antd";
+import React from 'react'
+import { Redirect } from 'react-router-dom'
+import { Form, Input, Button } from 'antd'
 
 const layout = {
   labelCol: {
@@ -9,35 +9,34 @@ const layout = {
   wrapperCol: {
     span: 6
   }
-};
+}
 const tailLayout = {
   wrapperCol: {
     offset: 6,
     span: 12
   }
-};
+}
 
 class EditForm extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      name: "",
-      username: "",
-      phone: "",
-      email: "",
-      company: "",
-      city: "",
-      street: "",
-      suite: ""
-    };
+      name: '',
+      username: '',
+      phone: '',
+      email: '',
+      company: '',
+      city: '',
+      street: '',
+      suite: ''
+    }
   }
 
-  componentDidMount() {
-   
+  componentDidMount () {
     const item =
-      this.props.items !== "None" && this.props.items !== null
+      this.props.items !== 'None' && this.props.items !== null
         ? this.props.items.filter(item => item.id === Number(this.props.id))[0]
-        : null;
+        : null
 
     if (item && item !== null) {
       this.setState({
@@ -51,19 +50,19 @@ class EditForm extends React.Component {
         city: item.address.city,
         street: item.address.street,
         suite: item.address.suite
-      });
+      })
     }
   }
 
-  onChange(e) {
-    const { name, value } = e.target;
-    let newState = this.state;
-    newState[name] = value;
-    this.setState(newState);
+  onChange (e) {
+    const { name, value } = e.target
+    const newState = this.state
+    newState[name] = value
+    this.setState(newState)
   }
 
-  save() {
-    const { edit } = this.props;
+  save () {
+    const { edit } = this.props
 
     const data = {
       name: this.state.name,
@@ -78,16 +77,16 @@ class EditForm extends React.Component {
       company: {
         name: this.state.name
       }
-    };
+    }
 
-    edit(this.state.id, data);
+    edit(this.state.id, data)
   }
 
-  onFinishFailed(errorInfo) {
-    console.log("Failed:", errorInfo);
+  onFinishFailed (errorInfo) {
+    console.log('Failed:', errorInfo)
   }
 
-  render() {
+  render () {
     const {
       name,
       username,
@@ -97,9 +96,9 @@ class EditForm extends React.Component {
       city,
       street,
       suite
-    } = this.state;
+    } = this.state
 
-    const { disabled, loading, items } = this.props;
+    const { disabled, loading, items } = this.props
     return (
       <div>
         {items ? (
@@ -205,8 +204,8 @@ class EditForm extends React.Component {
           <Redirect to="/" />
         )}
       </div>
-    );
+    )
   }
 }
 
-export default EditForm;
+export default EditForm

@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { PrivateRoute, NotFound, PublicRoute } from "./components";
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { PrivateRoute, NotFound, PublicRoute } from './components'
 import {
   contactsList,
   detailContact,
   authModule,
   editContact,
   addContact
-} from "./modules";
-import "./App.scss";
+} from './modules'
+import './App.scss'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
         <Router>
@@ -42,8 +42,8 @@ class App extends Component {
           </Switch>
         </Router>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

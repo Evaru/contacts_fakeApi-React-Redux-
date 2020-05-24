@@ -1,1 +1,1 @@
-export { default as contactsApi } from './contacts';
+export { default as contactsApi } from './contacts'

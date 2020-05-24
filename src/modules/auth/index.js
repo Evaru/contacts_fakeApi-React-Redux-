@@ -1,3 +1,3 @@
-import authModule from './containers/auth';
+import authModule from './containers/auth'
 
-export default authModule;
+export default authModule

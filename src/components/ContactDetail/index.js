@@ -1,5 +1,5 @@
-import React from "react";
-import { Row, Col, Card } from "antd";
+import React from 'react'
+import { Row, Col, Card } from 'antd'
 import {
   IdcardOutlined,
   UserOutlined,
@@ -7,12 +7,12 @@ import {
   MailOutlined,
   BankOutlined,
   HomeOutlined
-} from "@ant-design/icons";
+} from '@ant-design/icons'
 
 const ContactDetail = ({ item }) => {
   return (
     <Row gutter={16}>
-      <Col span={24} style={{ textAlign: "left" }}>
+      <Col span={24} style={{ textAlign: 'left' }}>
         <Card title="Contact Info" bordered={false}>
           <Col>
             <p label="Full Name">
@@ -39,18 +39,18 @@ const ContactDetail = ({ item }) => {
           </Col>
           <Col>
             <p label="Company">
-              <BankOutlined /> 
+              <BankOutlined />
               {item.company ? item.company.name : null}
             </p>
           </Col>
           <Col>
             <p label="Address">
-              <HomeOutlined /> 
+              <HomeOutlined />
               {item.address
                 ? item.address.city +
-                  " . " +
+                  ' . ' +
                   item.address.street +
-                  ", " +
+                  ', ' +
                   item.address.suite
                 : null}
             </p>
@@ -58,7 +58,7 @@ const ContactDetail = ({ item }) => {
         </Card>
       </Col>
     </Row>
-  );
-};
+  )
+}
 
-export default ContactDetail;
+export default ContactDetail

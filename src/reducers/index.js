@@ -2,65 +2,65 @@ const initialState = {
   items: null,
   loading: false,
   disabled: false
-};
+}
 
 export default (state = initialState, action) => {
-  const { type, payload } = action;
+  const { type, payload } = action
 
   switch (type) {
-    case "LOADING":
+    case 'LOADING':
       return {
         ...state,
         loading: true
-      };
-    case "LOADED":
+      }
+    case 'LOADED':
       return {
         ...state,
         loading: false
-      };
-    case "DISABLING":
+      }
+    case 'DISABLING':
       return {
         ...state,
         disabled: true
-      };
-    case "DISABLED":
+      }
+    case 'DISABLED':
       return {
         ...state,
         disabled: false
-      };
-    case "USERS:SET_ITEMS":
+      }
+    case 'USERS:SET_ITEMS':
       return {
         ...state,
         items: payload
-      };
-    case "CONTACTS:SET_ITEMS":
+      }
+    case 'CONTACTS:SET_ITEMS':
       return {
         ...state,
         items: payload
-      };
-    case "CONTACTS:SET_ITEM":
+      }
+    case 'CONTACTS:SET_ITEM':
       return {
         ...state,
         item: payload
-      };
-    case "CONTACTS:REMOVE_ITEM":
+      }
+    case 'CONTACTS:REMOVE_ITEM':
       return {
         ...state,
         items: state.items.filter(item => item.id !== payload)
-      };
-    case "CONTACTS:ADD_ITEM":
+      }
+    case 'CONTACTS:ADD_ITEM':
       return {
         ...state,
         items: state.items ? [...state.items, payload] : [payload]
-      };
-    case "CONTACTS:EDIT_ITEM":
+      }
+    case 'CONTACTS:EDIT_ITEM':
       return {
         ...state,
         items: state.items.map(item =>
           item.id === action.id ? [...item, payload] : item
         )
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}

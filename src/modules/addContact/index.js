@@ -1,4 +1,4 @@
 
-import addContact from './containers/addContact';
+import addContact from './containers/addContact'
 
-export default addContact;
+export default addContact

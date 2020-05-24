@@ -1,17 +1,18 @@
-import React from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { ContactDetail } from "../../../components";
-import ContactsListActions from "../../../actions";
-import { Spin } from "antd";
+import React from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import { ContactDetail } from '../../../components'
+import ContactsListActions from '../../../actions'
+import { Spin } from 'antd'
 
 class FullContactsContainer extends React.Component {
-  componentDidMount() {
-    const { fetchItem, match } = this.props;
-    fetchItem(match.params.id);
+  componentDidMount () {
+    const { fetchItem, match } = this.props
+    fetchItem(match.params.id)
   }
-  render() {
-    const { item, loading } = this.props;
+
+  render () {
+    const { item, loading } = this.props
     return !item ? (
       <Spin size="large" />
     ) : (
@@ -22,7 +23,7 @@ class FullContactsContainer extends React.Component {
           <Spin size="large" />
         )}
       </div>
-    );
+    )
   }
 }
 
@@ -31,4 +32,4 @@ export default withRouter(
     ({ contacts }) => contacts,
     ContactsListActions
   )(FullContactsContainer)
-);
+)
