@@ -12,3 +12,5 @@ API взято с https://jsonplaceholder.typicode.com/ , поэтому уда�
 
 Пароль можно вводить любой, но username берется с соответствующий строки отсюда - https://jsonplaceholder.typicode.com/users
 
+
+![Image details page blog](contacts.png)
