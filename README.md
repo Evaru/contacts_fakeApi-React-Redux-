@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+login: Bret
+password: Bret
 ## http://contacts.palashchenko.ru/
 
 ## Запуск командами:
